@@ -42,7 +42,7 @@ function ResumeNew() {
         </Row>
 
         <Row className="resume" style={{ justifyContent: "center" }}>
-          <Document file={pdf} error={<div>Error loading PDF</div>}>
+          <Document file={pdf}className="d-flex justify-content-center" error={<div>Error loading PDF</div>}>
             <Page pageNumber={1} scale={scale} />
           </Document>
         </Row>
