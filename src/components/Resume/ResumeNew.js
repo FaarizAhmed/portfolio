@@ -41,24 +41,11 @@ function ResumeNew() {
           </Button>
         </Row>
 
-        <Row className="resume">
-          <Document file={pdf} className="d-flex justify-content-center" error={<div>Error loading PDF</div>}>
+        <Row className="resume" style={{ justifyContent: "center" }}>
+          <Document file={pdf} error={<div>Error loading PDF</div>}>
             <Page pageNumber={1} scale={scale} />
           </Document>
         </Row>
-
-        {/* Remove the duplicate PDF render */}
-        {/* <Row style={{ justifyContent: "center", position: "relative" }}>
-          <Button
-            variant="primary"
-            href={pdf}
-            target="_blank"
-            style={{ maxWidth: "250px" }}
-          >
-            <AiOutlineDownload />
-            &nbsp;Download CV
-          </Button>
-        </Row> */}
       </Container>
     </div>
   );
